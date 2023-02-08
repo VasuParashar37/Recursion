@@ -1,0 +1,13 @@
+public class recursion12 {
+    public static int sumofdig(int n){
+        if(n==0)
+            return 0;
+        int r=n%10;
+        n=n/10;
+        return r+sumofdig(n);
+    }
+    public static void main(String[] args) {
+        int n=12345;
+        System.out.println(sumofdig(n));
+    }
+}

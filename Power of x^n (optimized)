@@ -1,0 +1,15 @@
+public class recursion10 {
+    public static int opti(int x,int n){
+        if(n==0)
+            return 1;
+        int half=opti(x,n/2);
+        int full=half*half;
+        if(n%2!=0) {
+            full = x * full;
+        }
+        return full;
+    }
+    public static void main(String[] args) {
+        System.out.println(opti(2,10));
+    }
+}

@@ -6,7 +6,7 @@ public class recursion3 {
 //        else
 //            return n*fact((n-1));
 
-        //<------OR------>\\
+        <------OR------>
 
         int fnm1=fact(n-1);
         int fn=n*fact(n-1);

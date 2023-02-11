@@ -1,0 +1,17 @@
+//count the no of zeroes in a number
+public class recursion15 {
+    public static int zero(int n,int c){
+        if(n==0)
+            return c;
+        int r=n%10;
+        n=n/10;
+        if(r==0){
+            return zero(n,c+1);
+        }
+        return zero(n,c);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(zero(101,0));
+    }
+}

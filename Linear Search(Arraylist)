@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+public class recursion16 {
+//    public static ArrayList<Integer> list =new ArrayList<>();
+     static  ArrayList allindex(int arr[],int i,ArrayList<Integer>list){
+        int ele=4;
+        if(i==arr.length)
+            return list;
+        if(arr[i]==ele)
+            list.add(i);
+        return allindex(arr,i+1,list);
+    }
+
+    public static boolean ispresent(int arr[],int i,int ele){
+        if(i==arr.length)
+            return false;
+        if(arr[i]==ele)
+            return true;
+        return ispresent(arr,i+1,ele);
+    }
+    public static int index(int i){
+        int ele=11;
+        int[] arr ={1,2,3,4,50};
+        if(i==arr.length)
+            return -1;
+        if(arr[i]==ele)
+            return (i);
+        return index(i+1);
+    }
+    public static void main(String[] args) {
+        int arr[]={1,2,4,4,50};
+//        System.out.println(index(0));
+//            System.out.println(ispresent(arr,0,39));
+//        allindex(0,list);
+          System.out.println(allindex(arr,0,new ArrayList<>()));
+    }
+}

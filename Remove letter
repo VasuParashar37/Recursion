@@ -1,0 +1,27 @@
+public class recString1 {
+    public static String remA(String up,String p){
+        if(up.isEmpty())
+            return p;
+        char ch=up.charAt(0);
+        if(ch=='a')
+            return remA(up.substring(1),p);
+        else {
+            return remA(up.substring(1), p + ch);
+        }
+    }
+    public static String remA(String up){
+        if(up.isEmpty())
+            return "";
+        char ch=up.charAt(0);
+        if(ch=='a')
+            return remA(up.substring(1));
+        else
+            return ch+remA(up.substring(1));
+    }
+
+        public static void main(String[] args){
+        String S="abaccadah";
+//        System.out.println(remA(S,""));
+        System.out.println(remA("Vasu"));
+    }
+}

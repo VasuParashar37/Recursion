@@ -1,0 +1,15 @@
+public class recString2 {
+    public static String remapple(String up){
+        if(up.isEmpty())
+            return "";
+        if(up.startsWith("app") && !up.startsWith("apple")) {
+            return remapple(up.substring(3));
+        }
+            else{
+                return up.charAt(0)+remapple(up.substring(1));
+            }
+        }
+    public static void main(String[] args) {
+        System.out.println(remapple("VasappuappleParashar"));
+    }
+}
